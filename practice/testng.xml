@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite" parallel="false" verbose="1">
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="Environment" value="default"/>
+    <test name="Login Suite">
+        <classes>
+            <class name="Specs.AuthenticationTests.LoginTest"  />
+        </classes>
+    </test>
+    <test name="Dashboard Suite">
+        <classes>
+            <class name="Specs.DashboardTests.DashboardVerificationTest" />
+        </classes>
+    </test>
+    <test name="Cart Process Suite">
+        <classes>
+            <class name="Specs.CartTests.AddItemToCartTest"/>
+            <class name="Specs.CartTests.RemoveItemFromCartTest"/>
+        </classes>
+    </test>
+    <test name="Check Out Process Suite">
+        <classes >
+            <class name="Specs.CheckoutTests.InitiateCheckoutTest"/>
+            <class name="Specs.CheckoutTests.ConfirmOrderDetailsTest"/>
+        </classes>
+    </test>
+    <test name="Finalized Order Suite">
+        <classes >
+            <class name="Specs.OrderTests.FinalizeOrderTest"/>
+        </classes>
+    </test>
+    <test name="Logout Suite">
+        <classes>
+            <class name="Specs.AuthenticationTests.LogoutTest" />
+        </classes>
+    </test>
+</suite>
+
+
